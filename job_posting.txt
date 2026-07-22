@@ -1,0 +1,35 @@
+ Job Summary:
+
+Reporting to the Senior Research  Manager, the Research Data Analyst will support research data needs by managing and analyzing diverse data sources to inform decision-making and manuscript development. Responsibilities include conducting data investigations and providing technical expertise to our research team. The analyst will also contribute to capacity building through data training and the development of analytical frameworks. The analyst will contribute to evaluating HIV prevention and treatment programmes using SmartCare and related national data systems, including development of causal inference analyses to inform policy.Interview preparation coaching
+
+The analyst will lead data extraction and analysis projects using electronic health records (EHR) data and other study measurements. This role involves facilitating data access, providing analytic support, developing custom data tools, and fostering collaboration among researchers and analysts. Given the study’s diverse scope, the analyst may also take on additional data-related tasks as needed. She/he will be based in Lusaka, province.
+
+Main Duties
+
+Retrieve requested data in support of PCC projects. Data will be formatted to requested specifications for delivery to research teams.
+Conduct analyses ranging from data aggregation to complex statistical modeling to data visualization using various data sources.
+Perform reviews to ensure accuracy and completeness of data.
+Create secondary data sets from databases to support new and ongoing research.
+Under supervision of Principal Investigators, conduct statistical analyses and present them to the research team and collaborators.
+Review and interpret analytic requests with the study team
+Produce publication ready tables and data visualizations
+Think independently to identify data oddities, conceive of creative data visualizations, and suggest logical next steps
+ 
+
+Qualifications
+
+Master’s Degree in Public Health, Epidemiology, Data Science, Biostatistics, or a related field.
+Demonstrated training and experience in epidemiology and quantitative methods
+Strong understanding of advanced regression and causal inference methods (e.g., differences-in-differences, regression discontinuity, propensity score methods)
+Experience handling missing data and applying appropriate weighting or other methods in observational datasets
+Experience with survival and longitudinal models and multilevel/hierarchical modelling
+Comfort working with large, relational datasets and on remote servers
+High proficiency in R or Stata (including data management, modelling, and visualization)
+Ability to perform fuzzy merges and link complex datasets using imperfect identifiers
+Self-motivated and proactive, with excellent organizational and communication skills
+Experience working with SmartCare data or other electronic health records
+At least 3 years of advanced data analysis experience with health or epidemiologic data
+Action-oriented and eager to embrace new opportunities and tough challenges with a sense of urgency, high energy, and enthusiasm
+Comfortable working in a fast-paced environment
+Strong organizational, prioritization, and time management skills
+Suitably qualified candidates are invited to apply. However, only shortlisted candidates will be contacted.

@@ -1,0 +1,21 @@
+Dear Hiring Manager,
+
+As a seasoned software developer and team lead with experience in managing and analyzing diverse data sources, I am confident in my ability to support research data needs and contribute to decision-making and manuscript development. My experience as a Consultant and Team Lead at Digital Treasure Zambia has equipped me with the skills to lead data extraction and analysis projects, facilitate data access, and provide analytic support.
+
+Specifically, my experience in deploying the Community Health Information Platform (CHiP) in various provinces, facilitating user acceptance requirement and user advisory group workshops, and reviewing and validating detailed system design and technical specification documentation have honed my skills in data management and analysis. Additionally, my experience as a Software Developer Lead at Northrise University has given me expertise in guiding team development efforts, providing technical leadership, and maintaining high standards of software quality.
+
+I am excited about the opportunity to apply my skills and experience to the Research Data Analyst role, particularly in evaluating HIV prevention and treatment programs using SmartCare and related national data systems. Although my experience is not directly in epidemiology or biostatistics, my background in software development and data management has provided me with transferable skills in data analysis and visualization. I am eager to bring my technical expertise and problem-solving skills to a new challenge and contribute to the success of your team.
+
+I would welcome the opportunity to discuss my application and how my skills and experience align with the requirements of the role. Please do not hesitate to contact me to arrange a conversation.
+
+Sincerely,
+Salifyanji Malunga Taala
+
+=== FLAGGED CLAIMS ===
+Here is the list of unsupported claims:
+
+* Managing and analyzing diverse data sources (not explicitly mentioned in the resume, although data management and analysis are mentioned in specific contexts)
+* Supporting research data needs and contributing to decision-making and manuscript development (not mentioned in the resume)
+* Experience in evaluating HIV prevention and treatment programs (not mentioned in the resume)
+* Data analysis and visualization skills (mentioned in the context of software development, but not explicitly as a standalone skill)
+* Epidemiology or biostatistics background (mentioned as a lack of experience, but implies some familiarity that is not explicitly supported by the resume)

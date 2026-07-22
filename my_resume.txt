@@ -1,0 +1,163 @@
+SALIFYANJI MALUNGA TAALA 
+Mapepe farm N0. 47a, Chilanga, Lusaka· 260976734010
+Zambian. NRC-410235/61/1
+salifyataala@gmail.com ·
+I am a decisive and results-driven individual with expertise in leading development teams, providing technical 
+leadership, and maintaining high standards of software quality. A creative problem-solver with excellent 
+interpersonal skills. I am known for my ability to guide projects to successful completion through effective project 
+planning and management.
+EXPERIENCE
+SEPTEMBER 2022 – FEBUARY 2025
+CONSULTANT – TEAM LEAD – BUSINESS ANALYST, DIGITAL TREASURE ZAMBIA
+Point of Contact (POC) for the DTZL team, coordinating and reporting progress for all project activities assigned to the 
+DTZL team. Leading Requirements validation sessions and documentation. Preparation of training materials and 
+facilitating training.
+▪ Facilitation of PATH, MoH CHiP capacity building (M & E) Bootcamp.
+▪ Deployment of CHiP (Community Health Information Platform) in Copperbelt (Ndola, Mpongwe), Southern 
+Province (Kazungula), Eastern (Katete)
+▪ Facilitation of User Acceptance Requirement and User Advisory Group Workshops
+▪ Performed as a Team Lead & Business Analyst on the CHiP (Community Health Information Platform) Project
+Implemented under PATH Zambia and MoH.
+▪ Responsible for Inception report writing of the CHiP (Community Health Information Platform) Project
+Implemented under PATH Zambia and MoH.
+▪ Review, validation and documentation of detailed system design and technical specification documentation.
+▪ Review, validation and documentation of User Interface (UI) mockups
+▪ Development of System performance indicators
+▪ Test scenario(cases) development
+▪ Development of requirements traceability matrix
+SEPTEMBER 2022 – MAY 2023
+SOFTWARE DEVELOPER LEAD, DIGITAL TREASURE ZAMBIA
+Guide team development efforts towards successful project delivery through Project Planning & Project Management. 
+Provide technical leadership to teammates through coaching and mentorship. Maintain high standards of Software 
+Quality within the team by establishing good practices and habits. Creating project prototypes. System testing and 
+Documentation. Monitoring and Evaluation. Business Analysis.
+ACHIEVEMENTS
+▪ Successfully led the team of 6 developers to complete different modules of the in-house mobile application.
+▪ Planned, managed, and prototyped the Client Research Learning app (Siyafunda) and saw it to completion.
+2
+▪ Contributed as part of the team that worked on the Viral Respiratory Disease Surveillance System which was 
+ZNPHI and MOH project.
+▪ Successfully documented the User Manual for the in-house Digitres Mobile application.
+JANUARY 2022 – AUGUST 2022
+SOFTWARE DEVELOPER LEAD, NORTHRISE UNIVERSITY
+Guide team development efforts towards successful project delivery. Provide technical leadership to teammates through 
+coaching and mentorship. Maintain high standards of software quality within the team by establishing good practices 
+and habits. Collaborate with other software developers, business analysts and software architects to plan, design, 
+develop, test, and maintain web- and desktop-based business applications built on different technologies.
+ACHIEVEMENTS
+▪ Was responsible for leading 13 software developers working on different projects, utilizing standup meetings 
+and agile methodology practices successfully.
+▪ Ensured that the modules developed for in-house software passed through Software Quality Assurance (Unit 
+testing, integration testing, functional requirement testing) before deployment to the live environment and ready 
+for use by stakeholders.
+▪ Successfully documented business rules from different stakeholders in the organization.
+▪ Cleaned and normalized data and led the migration of data from the Oracle Apex database to the PostgreSQL
+database.
+JANUARY 2019 – DECEMBER 2021
+SOFTWARE DEVELOPER, NORTHRISE UNIVERSITY
+Working with APEX application front end design. Training staff members the new systems. Working with Oracle 
+database. Documentation of new introduced system. Research on new technologies. Back-end development using 
+PostgreSQL and Laravel. Frontend development using Vue, Vuetify, HTML5, CSS.
+ACHIEVEMENTS
+▪ I was part of the team that worked on the Wikis Project, where a JavaScript front end was built to consume a 
+legacy app's APIs, modernizing it using Vue, Vuetify, JavaScript, Axios and TypeScript, Laravel with Postgres 
+Database.
+▪ Successfully designed the New inhouse Student Management System and provided advice on the technology to 
+be used in the new system.
+▪ Managed to create new modules based on new business rules which were implemented for stakeholders in the 
+APEX application.
+▪ Effectively maintained the Student Management System.
+JULY 2018- JULY 2018
+MARKETING, BENEFITS CONSULTING SERVICES LTD
+Selling insurance products such as life insurance and explaining the benefits of the same.
+ACHIEVEMENTS
+▪ Successfully sold insurance products such as life insurance and effectively explained their benefits to customers
+FEBRUARY 2018 – DECEMBER 2018, 
+REGISTRAR’S OFFICE, NORTHRISE UNIVERSITY
+Working with student management system. Exam time table creation. Google class updates. Class register distribution.
+AUGUST 2017- DECEMBER 2017 
+MEDIA TEAM, NORTHRISE UNIVERSITY
+Content creation, Story writing & Photography
+ACHIEVEMENTS
+▪ Engaged in content creation, story writing, and photography.
+FEBRUARY 2017- JUNE 2017 
+RECRUITMENT TEAM, NORTHRISE UNIVERSITY
+Data Entry-Registering new student records in the system. Filing and arranging hard copy records.
+FEBRUARY 2015 – DECEMBER 2016
+GRAPHIC DESIGNER/TUTOR, GLOBAL IMPACT INITIAVE
+Designing the organization tickets and shirt print typography. Computer Literacy Basic trainer- Trained grade 12 school 
+leavers’ computer basics program included Microsoft Word, Excel, and Power Point. Web development – Trained school 
+leavers web development using HTML5, CSS and JavaScript and jQuery.
+ACHIEVEMENTS
+▪ Designed the organization's tickets and shirt print typography.
+▪ Trained over 30 grade 12 school leavers in computer basics program, including Microsoft Word, Excel, and 
+PowerPoint.
+▪ Trained over 20 school leavers in web development using HTML5, CSS, JavaScript, and jQuery.
+ACADEMIA
+MARCH 2025 –
+PART- TIME ICT INSTRUCTOR –
+Lusaka Golds Smith University College
+2022- 2024
+MASTER OF SCIENCE IN DATA SCIENCE AND BIG DATA, MULUNGUSHI UNIVERSITY
+Completed my Masters
+2015-2018
+BIT- WEB AND SOFTWARE DEVELOPMENT, NORTHRISE UNIVERSITY
+Completed my degree.
+2010
+ADVANCED DIPLOMA - COMPUTER SCIENCE AND INFORMATION PROCESSING, ABMA
+Completed with the higher credit.
+2010
+DIPLOMA II - COMPUTER SCIENCE AND INFORMATION PROCESSING, ABMA- EVELYN HONE 
+COLLEGE
+Completed with the higher credit.
+2009
+DIPLOMA I - COMPUTER SCIENCE AND INFORMATION PROCESSING, ABMA- EVELYN HONE 
+COLLEGE
+Completed with the higher credit.
+3
+4
+PROGRAMING LANGUAGE EXPERIENCE & SKILLS
+• HTML5, CSS3, Bootstrap, JAVASCRIPT, Vuejs, 
+Vuetify, PrimeVue
+• Typescript, Nodejs, React, React Native, Axios, 
+PHP, Laravel, JSON, Graghql, Git. 
+• Graphic Design: Photoshop, Figma, Justinmind,
+Canvas, Adobe InDesign, Adobe Illustrator, 
+Premier Pro
+• Version Control & Project Management: GitHub, 
+GitLab, Bitbucket, Jira, 
+• Mobile Development Flutter (c)
+• Deep Learning (Object Detection Models) 
+YOLOV5, Machine Learning (c ), GenerativeAI,
+• Tensor Flow (c), Keras (c)
+• Databases MySQL, Oracle DB, PostgreSQL 
+and Mongo DB (c)
+• Data Science: Python, SQL
+• Internet of Things and Big Data Analytics (c).
+• Intermediate Computer Networking.
+• Software Quality Assurance and System 
+Analysis and Design
+OTHER SKILLS
+• Project Management using Agile Methodology
+• Good communication skills and Team player
+• Open minded and embraces change 
+• Good conflict resolution skills and Work with minimal supervision.
+REFERENCES
+Mr. Daniel Ng’andu
+Project Officer
+PATH
+Lusaka, Zambia 
+Mobile: +260 97 5517084
+Email: dangandu@path.org
+Mr. Lenny Chavhunduka
+Software Consultant - CEO
+Digital Treasure Zambia Limited
+Mobile: 0976692144
+Email: lenny@digitres.com
+Mr. Lusuntha Ngulube
+Chief Operations Officer
+Northrise University
+P.O BOX 240271,
+Ndola, Zambia 
+Mobile: 0957757386
+Email: lusuntha.ngulube@northrise.net
