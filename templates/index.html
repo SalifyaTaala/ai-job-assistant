@@ -1,47 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Job Assistant</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
-        textarea { width: 100%; height: 150px; margin-bottom: 15px; padding: 10px; }
-        button { padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer; }
-        #output { margin-top: 20px; white-space: pre-wrap; background: #f5f5f5; padding: 15px; }
-        #flagged { margin-top: 15px; background: #fff3cd; padding: 15px; white-space: pre-wrap; }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI job application assistant</title>
+<script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .font-voice { font-family: 'Fraunces', serif; }
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  textarea::placeholder { color: #8A8578; }
+  .thread::-webkit-scrollbar { width: 6px; }
+  .thread::-webkit-scrollbar-thumb { background: #D8D3C4; border-radius: 3px; }
+</style>
 </head>
-<body>
-    <h1>AI Job Application Assistant</h1>
+<body class="bg-[#FAF8F3]">
+<div id="root"></div>
 
-    <label>Your Resume:</label>
-    <textarea id="resume" placeholder="Paste your resume text here..."></textarea>
+<script type="text/babel">
+{% raw %}
+const { useState, useRef, useEffect } = React;
 
-    <label>Job Description:</label>
-    <textarea id="job_description" placeholder="Paste the job posting here..."></textarea>
+function StampBadge({ status, count }) {
+  const clean = status === "clean";
+  return (
+    <div className={
+      "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-mono text-[11px] tracking-wide " +
+      (clean ? "bg-[#E1F5EE] text-[#085041]" : "bg-[#FAEEDA] text-[#633806]")
+    }>
+      <span className="w-1.5 h-1.5 rounded-full" style={{ background: clean ? "#0F6E56" : "#854F0B" }}></span>
+      {clean ? "verified · clean" : `verified · ${count} correction${count === 1 ? "" : "s"}`}
+    </div>
+  );
+}
 
-    <button onclick="generate()">Generate Cover Letter</button>
+function LetterCard({ turn }) {
+  return (
+    <div className="max-w-2xl">
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-[13px] text-[#8A8578] font-mono">{turn.jobTitle}</p>
+        <StampBadge status={turn.status} count={turn.attempts} />
+      </div>
+      <div className="bg-white border border-[#E8E3D6] rounded-lg px-7 py-6 font-voice text-[15px] leading-[1.75] text-[#2A2823] whitespace-pre-wrap">
+        {turn.letter}
+      </div>
+    </div>
+  );
+}
 
-    <div id="output"></div>
-    <div id="flagged"></div>
+function UserTurn({ jobTitle }) {
+  return (
+    <div className="flex justify-end">
+      <div className="bg-[#14212C] text-[#F7F4EE] rounded-lg px-4 py-2.5 text-[13px] font-mono max-w-md">
+        generate → {jobTitle}
+      </div>
+    </div>
+  );
+}
 
-    <script>
-        async function generate() {
-            const resume = document.getElementById("resume").value;
-            const job_description = document.getElementById("job_description").value;
+function App() {
+  const [resume, setResume] = useState("");
+  const [jobDescription, setJobDescription] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
+  const [turns, setTurns] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const threadEnd = useRef(null);
 
-            document.getElementById("output").innerText = "Generating...";
-            document.getElementById("flagged").innerText = "";
+  useEffect(() => {
+    threadEnd.current?.scrollIntoView({ behavior: "smooth" });
+  }, [turns, loading]);
 
-            const response = await fetch("/generate", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ resume, job_description })
-            });
+  async function handleGenerate() {
+    if (!resume.trim() || !jobDescription.trim()) return;
+    const title = jobTitle.trim() || "untitled application";
+    setLoading(true);
+    setTurns(prev => [...prev, { role: "user", jobTitle: title }]);
 
-            const data = await response.json();
-            document.getElementById("output").innerText = data.message || data.error;
-            document.getElementById("flagged").innerText = "Flagged claims:\n" + (data.flagged || "");
-        }
-    </script>
+    try {
+      const res = await fetch("/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ resume, job_description: jobDescription })
+      });
+      const data = await res.json();
+      const clean = (data.flagged || "").toLowerCase().includes("none found");
+
+      setTurns(prev => [...prev, {
+        role: "assistant",
+        jobTitle: title,
+        letter: data.message || data.error || "No response.",
+        status: clean ? "clean" : "corrected",
+        attempts: data.attempts_used || 1
+      }]);
+    } catch (e) {
+      setTurns(prev => [...prev, {
+        role: "assistant",
+        jobTitle: title,
+        letter: "Could not reach the server. Check that app.py is running.",
+        status: "corrected",
+        attempts: 0
+      }]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div className="flex h-screen">
+      <aside className="w-[460px] shrink-0 bg-[#14212C] text-[#F7F4EE] flex flex-col p-9 gap-7">
+        <div>
+          <p className="text-[11px] font-mono tracking-[0.14em] uppercase text-[#C08A2E] mb-2">Verified by design</p>
+          <h1 className="font-voice text-[26px] leading-[1.2] text-[#F7F4EE]">AI job application<br/>assistant</h1>
+          <p className="text-[13px] text-[#8FA3AE] mt-3 leading-relaxed">Every letter is generated, checked against your resume, and corrected before it reaches you.</p>
+        </div>
+
+        <div className="h-px bg-[#24333F]"></div>
+
+        <div className="flex flex-col gap-2">
+          <label className="text-[12px] font-mono text-[#8FA3AE]">role / company</label>
+          <input
+            value={jobTitle}
+            onChange={e => setJobTitle(e.target.value)}
+            placeholder="Research Data Analyst — Biyashara"
+            className="bg-[#1C2C38] border border-[#2C3D49] rounded-md px-4 py-3 text-[14px] placeholder-[#5C6F7A] outline-none focus:border-[#4A6373]"
+          />
+        </div>
+
+        <div className="flex flex-col gap-2 flex-1 min-h-0">
+          <label className="text-[12px] font-mono text-[#8FA3AE]">your resume</label>
+          <textarea
+            value={resume}
+            onChange={e => setResume(e.target.value)}
+            placeholder="Paste your resume text here..."
+            className="bg-[#1C2C38] border border-[#2C3D49] rounded-md px-4 py-3 text-[14px] leading-relaxed placeholder-[#5C6F7A] outline-none focus:border-[#4A6373] resize-none flex-1 min-h-[160px]"
+          />
+        </div>
+        <div className="flex flex-col gap-2 flex-1 min-h-0">
+            
+          <label className="text-[12px] font-mono text-[#8FA3AE]">job description</label>
+          <textarea
+            value={jobDescription}
+            onChange={e => setJobDescription(e.target.value)}
+            placeholder="Paste the job posting here..."
+            className="bg-[#1C2C38] border border-[#2C3D49] rounded-md px-4 py-3 text-[14px] leading-relaxed placeholder-[#5C6F7A] outline-none focus:border-[#4A6373] resize-none flex-1 min-h-[160px]"
+          />
+        </div>
+
+        <button
+          onClick={handleGenerate}
+          disabled={loading}
+          className="bg-[#C08A2E] hover:bg-[#AD7A28] disabled:opacity-50 text-[#2C1D06] font-medium text-[14px] rounded-md py-3.5 transition-colors"
+        >
+          {loading ? "Generating…" : "Generate letter"}
+        </button>
+      </aside>
+
+      <main className="flex-1 overflow-y-auto thread px-8 py-8">
+        {turns.length === 0 && !loading && (
+          <div className="h-full flex items-center justify-center">
+            <p className="text-[14px] text-[#B5AF9C] font-voice italic">Your generated letters will appear here, one thread per session.</p>
+          </div>
+        )}
+
+        <div className="flex flex-col gap-6 max-w-2xl mx-auto">
+          {turns.map((t, i) =>
+            t.role === "user"
+              ? <UserTurn key={i} jobTitle={t.jobTitle} />
+              : <LetterCard key={i} turn={t} />
+          )}
+          {loading && (
+            <div className="flex items-center gap-2 text-[13px] text-[#8A8578] font-mono">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C08A2E] animate-pulse"></span>
+              generating and verifying…
+            </div>
+          )}
+          <div ref={threadEnd} />
+        </div>
+      </main>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+{% endraw %}
+</script>
 </body>
 </html>

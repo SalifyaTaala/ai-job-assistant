@@ -24,6 +24,11 @@ Instructions:
 - If the job asks for experience not present in the resume, focus on the closest genuinely relevant transferable experience — do not fabricate direct experience.
 - Avoid generic phrases like "I am writing to express my interest"
 - End with a clear, confident call to action
+- Do NOT express eagerness to work with specific named tools, systems, methods, 
+or program areas (e.g. specific software, methodologies, datasets) unless they 
+appear in the resume — even when framed as "eager to learn" or "excited to contribute to."
+- General enthusiasm for the role or field is fine. Naming specific unlearned 
+tools/methods is not.
 """
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
@@ -38,7 +43,18 @@ def verify_message(message, resume_text):
     verify_prompt = f"""Review this cover letter against the original resume. 
 List any claims, experiences, or skills mentioned in the letter that are NOT 
 explicitly supported by the resume. Be strict — flag anything that sounds 
-like an inference or embellishment, even if plausible.
+like an inference or embellishment, even if plausible.Review this cover letter against the original resume.
+
+Flag ONLY claims that are specific, checkable, and NOT supported by the resume — 
+for example: named tools, systems, methods, programs, certifications, job titles, 
+or specific types of experience (e.g. "epidemiology," "SmartCare," "manuscript 
+development") that do not appear in the resume, whether stated as past experience 
+OR as future interest/eagerness to learn.
+
+Do NOT flag normal cover-letter framing, tone, or reasonable characterization of 
+real resume content — e.g. summarizing team leadership as "self-motivated," or 
+describing consistent delivery as "results-driven," is acceptable synthesis, not 
+fabrication. Only flag things a reader could reasonably fact-check and find false.
 
 RESUME:
 {resume_text}
@@ -117,6 +133,11 @@ Instructions:
 - Do NOT infer, assume, or add specific claims not directly stated.
 - If the job asks for experience not present in the resume, focus on the closest genuinely relevant transferable experience — do not fabricate direct experience.
 - End with a clear, confident call to action
+- Do NOT express eagerness to work with specific named tools, systems, methods, 
+or program areas (e.g. specific software, methodologies, datasets) unless they 
+appear in the resume — even when framed as "eager to learn" or "excited to contribute to."
+- General enthusiasm for the role or field is fine. Naming specific unlearned 
+tools/methods is not.
 """
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
